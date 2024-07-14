@@ -1,0 +1,148 @@
+* {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    height: 93vh;
+    padding: 0 20px;
+    background-image: url(./фон.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all .25s ease;
+    background: black;
+    opacity: .75;
+}
+
+.nav img {
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+    margin-right: -120px;
+}
+
+.nav-list {
+    width: 98%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+}
+
+.nav a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    padding: 12px;
+}
+
+.underline-one {
+	color: white; /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+    align-items: center;
+    text-align: center;
+}
+
+#name {
+    margin-left: 404px;
+}
+
+.underline-one:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: black; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.underline-one:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: aqua; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+
+h1 {
+    background: linear-gradient(to bottom, #01becc 25%, #0f5257 25%, #f30101 60%, #ff00c8 20%,#0000ee 80%);
+    font-size: 23px;
+    width: 180px;
+    margin-left: 584px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+p:nth-of-type(5) {
+    margin-left: 350px;
+}
+
+@media screen and (max-width: 1081px) {
+    .photo {
+        display:none;
+    }
+}
+
+@media screen and (max-width: 1081px) {
+    button {
+        height: 82px;
+        margin-top: 21%;
+        margin-left: 293px;
+    }
+    .dodoo {
+        display:none;
+    }
+    h1 {
+        margin-left: 370px;
+        font-size: 40px;
+        width: 240px;
+    }
+    p {
+        font-size: 28px;
+    }
+    .dodo {
+        display: flex;
+    }
+    #name {
+        margin-left: 120px;
+    }
+    .nav a {
+        font-size: 32px;
+    }
+    p:nth-of-type(5) {
+        margin-left: 80px;
+    }
+}
